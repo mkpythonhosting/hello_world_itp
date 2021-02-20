@@ -1,0 +1,12 @@
+.bike img{
+     width: 90px;
+    height: 70px;
+    margin-left: 2px;
+    margin-right: 50px;
+    border-radius: 50%;
+    }
+
+    .bg img{
+    background-image: "{% static 'images/bg_image.jpg' %}"
+    
+}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class='bg'>
+  <h1>Clients listing page {{name}} </h1>
+      <section id="listings" class="py-4">
+          <div class="container">
+            <div class="row">
+              {% if driverList %}
+                {% for driver in driverList %}
+                    <div class="col-md-6 col-lg-4 mb-4">
+                      <div class="card listing-preview">
+                        <img class="card-img-top" src="{{ driver.photo.url }}" alt="" height="250" width="250">
+      	                  
+                      	<div class="card-body">
+      		                    <div class="listing-heading text-center">
+      		                      <h4 class="text-primary">{{ driver.name}}</h4>
+      		                      <p>
+      		                        <i class="fas fa-map-marker text-secondary"></i> {{ driver.email}}
+      		                      </p>
+      		                      <p>
+      		                        <i class="fas fa-map-marker text-secondary"></i> {{ driver.phone}}
+      		                      </p>
+      		                    </div>
+                         	 <hr>
+                      	 </div>
+                       </div>
+                    </div>
+                {% endfor %}
+              {% else %}
+                <div class="col-md-12">
+                  <p>No driver listings available</p>
+                </div>
+              {% endif %}
+                                           
+            </div>
+        </div>
+       </section>
+       </div>
+
+
+{% endblock %}
+
